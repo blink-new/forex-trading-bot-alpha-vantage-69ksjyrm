@@ -1,0 +1,331 @@
+/* Global styles for the Forex Trading Bot */
+.app {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Chart container improvements */
+.recharts-wrapper {
+  font-family: inherit;
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animation for loading states */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth transitions for interactive elements */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, rgb(255 255 255 / 90%) 0%, rgb(255 255 255 / 70%) 100%);
+  backdrop-filter: blur(10px);
+}
+
+/* Chart.js custom styling */
+.chartjs-render-monitor {
+  border-radius: 8px;
+}
+
+/* Responsive improvements */
+@media (width <= 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .md-grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .md-grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Custom badge styles */
+.badge-success {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.badge-warning {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Signal strength indicators */
+.signal-strong {
+  box-shadow: 0 0 20px rgb(34 197 94 / 30%);
+}
+
+.signal-medium {
+  box-shadow: 0 0 20px rgb(234 179 8 / 30%);
+}
+
+.signal-weak {
+  box-shadow: 0 0 20px rgb(239 68 68 / 30%);
+}
+
+/* Performance metrics styling */
+.metric-positive {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.metric-negative {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+
+.metric-neutral {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+/* Loading animation improvements */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover effects for cards */
+.hover-lift {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgb(0 0 0 / 10%);
+}
+
+/* Typography improvements */
+.text-gradient {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Focus states for accessibility */
+.focus-ring:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgb(59 130 246 / 40%);
+}
+
+/* Strategy badge styling */
+.strategy-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+/* Risk level indicators */
+.risk-low {
+  background-color: #dcfce7;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+.risk-medium {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.risk-high {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+/* Chart container responsive */
+.chart-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+@media (width <= 640px) {
+  .chart-container {
+    height: 300px;
+  }
+}
+
+/* Recommendation card animations */
+.recommendation-card {
+  animation: slide-in-up 0.5s ease-out;
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+/* Performance grid responsive */
+.performance-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media (width <= 640px) {
+  .performance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Custom select styling */
+.custom-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f2937;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0%;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 1000;
+}
+
+.tooltip:hover::before {
+  opacity: 100%;
+}
+
+/* Signal icon animations */
+.signal-icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.signal-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Price display styling */
+.price-display {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.025em;
+}
+
+/* Status indicators */
+.status-online {
+  background-color: #22c55e;
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+}
+
+.status-offline {
+  background-color: #ef4444;
+}
+
+.status-loading {
+  background-color: #f59e0b;
+  animation: pulse-yellow 1s infinite;
+}
+
+@keyframes pulse-yellow {
+  0%, 100% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 70%;
+  }
+}
