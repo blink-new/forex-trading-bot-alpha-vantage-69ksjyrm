@@ -130,7 +130,7 @@ const App: React.FC = () => {
     try {
       await fetchRealForexData(pair);
     } catch (error) {
-      console.error('Erreur lors de l\\'analyse:', error);
+      console.error('Erreur lors de l\'analyse:', error);
       setApiStatus({
         status: 'error',
         message: error instanceof Error ? error.message : 'Erreur inconnue',
@@ -330,7 +330,7 @@ const App: React.FC = () => {
     analyzeRealStrategies(demoData, '5min').then(() => {
       setAnalyzed(true);
     }).catch(error => {
-      console.error('Erreur lors de l\\'analyse des données de démonstration:', error);
+      console.error('Erreur lors de l\'analyse des données de démonstration:', error);
     });
   };
 
